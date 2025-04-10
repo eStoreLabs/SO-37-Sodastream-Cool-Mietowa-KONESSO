@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Butelka Mięta</title>
+  <style>
+    @font-face{font-family:HurmeGeometricSans3-Bold;src:local('HurmeGeometricSans3-Bold'),url('./fonts/HurmeGeometricSans3-Bold.woff2') format('truetype')}@font-face{font-family:HurmeGeometricSans3-Regular;src:local('HurmeGeometricSans3-Regular'),url('./fonts/HurmeGeometricSans3-Regular.woff2') format('truetype')}@font-face{font-family:HurmeGeometricSans3-Black;src:local('HurmeGeometricSans3-Black'),url('./fonts/HurmeGeometricSans3-Black.woff2') format('truetype')}@font-face{font-family:HurmeGeometricSans3-Light;src:local('HurmeGeometricSans3-Light'),url('./fonts/HurmeGeometricSans3-Light.woff2') format('truetype')}#es-rc #es-rc-content{font-family:HurmeGeometricSans3-Regular,sans-serif,sans-serif;font-size:16px;font-weight:300;line-height:1.2;max-width:1110px;margin:0 auto;padding:0;overflow:hidden;color:#14284b;background:#fff}#es-rc #es-rc-content *{box-sizing:border-box}#es-rc #es-rc-content h2,#es-rc #es-rc-content h3,#es-rc #es-rc-content h4,#es-rc #es-rc-content h5,#es-rc #es-rc-content h6,#es-rc #es-rc-content p{margin:0}#es-rc #es-rc-content img{max-width:100%;display:block;margin:0 auto}#es-rc #es-rc-content .es-kv{background:url(./img/kv-bg.png) center center/cover no-repeat;padding-bottom:75px}#es-rc #es-rc-content .es-kv__logo{padding-top:30px;margin-bottom:30px;max-width:90%}#es-rc #es-rc-content .es-kv__content{padding-left:10px;padding-right:10px;text-align:center}#es-rc #es-rc-content .es-kv__title{margin-bottom:10px;font-size:70px;font-family:HurmeGeometricSans3-Black,sans-serif;font-weight:900;color:inherit}#es-rc #es-rc-content .es-description__title,#es-rc #es-rc-content .es-kv__description,#es-rc #es-rc-content .es-kv__subtitle{font-family:HurmeGeometricSans3-Bold,sans-serif;font-weight:700}#es-rc #es-rc-content .es-kv__subtitle{margin-bottom:30px;font-size:18px}#es-rc #es-rc-content .es-kv__description{margin-bottom:20px}#es-rc #es-rc-content .es-kv__packshot{max-width:30%}#es-rc #es-rc-content .es-description{display:flex;flex-direction:column-reverse;background:linear-gradient(to bottom,#72b1c3 50%,#14284b 50%)}#es-rc #es-rc-content .es-description__left{padding:30px 10px 30px 0}#es-rc #es-rc-content .es-description__right{padding:30px 10px}#es-rc #es-rc-content .es-description__img{margin-top:-65px}#es-rc #es-rc-content .es-description__title{margin-bottom:35px;font-size:16px;color:#eeebe6;text-align:center}#es-rc #es-rc-content .es-description__subtitle{margin-bottom:35px;font-size:16px;font-family:HurmeGeometricSans3-Regular,sans-serif;font-weight:500;color:#eeebe6;text-align:center}#es-rc #es-rc-content .es-style{background:#14284b;padding-bottom:50px;margin-top:-1px}#es-rc #es-rc-content .es-style__title{margin-bottom:20px;font-size:24px;font-family:HurmeGeometricSans3-Bold,sans-serif;color:#fff;text-align:center}#es-rc #es-rc-content .es-style__subtitle{margin-bottom:10px;font-size:18px;font-family:HurmeGeometricSans3-Bold,sans-serif;color:#fff;text-align:center}#es-rc #es-rc-content .es-style__description{padding-left:10px;padding-right:10px;max-width:450px;margin:0 auto;font-size:16px;font-family:HurmeGeometricSans3-Regular,sans-serif;color:#fff;text-align:center}#es-rc #es-rc-content .es-style__packshot-title{margin-top:20px;margin-bottom:30px;font-size:24px;font-family:HurmeGeometricSans3-Bold,sans-serif;color:#fff;text-align:center}#es-rc #es-rc-content .es-style__img{max-width:25%}#es-rc #es-rc-content .es-style__img--desktop{max-width:100%;display:none}#es-rc #es-rc-content .es-style__packshot-wrapper{display:none}#es-rc #es-rc-content .es-benefits{padding-top:30px;padding-bottom:30px;background:#72b1c3}#es-rc #es-rc-content .es-benefits__img,#es-rc #es-rc-content .es-features__img,#es-rc #es-rc-content .es-steps__image{margin-bottom:30px}#es-rc #es-rc-content .es-benefits__title,#es-rc #es-rc-content .es-cross__title,#es-rc #es-rc-content .es-design__title,#es-rc #es-rc-content .es-features__title{padding-left:10px;padding-right:10px;margin-bottom:30px;font-size:24px;font-family:HurmeGeometricSans3-Bold,sans-serif;text-align:center}#es-rc #es-rc-content .es-benefits__subtitle{padding-left:10px;padding-right:10px;margin-bottom:10px;font-size:16px;text-align:left;font-family:HurmeGeometricSans3-Bold,sans-serif;color:#14284b}#es-rc #es-rc-content .es-benefits__description,#es-rc #es-rc-content .es-design__description,#es-rc #es-rc-content .es-features__description{padding-left:10px;padding-right:10px;margin-bottom:20px;font-size:16px;font-family:HurmeGeometricSans3-Regular,sans-serif}#es-rc #es-rc-content .es-benefits__content-title{max-width:300px;margin:0 auto 30px;font-size:24px;font-family:HurmeGeometricSans3-Bold,sans-serif;color:#fff;text-align:center}#es-rc #es-rc-content .es-benefits__content-list,#es-rc #es-rc-content .es-steps__list{display:flex;flex-direction:column;align-items:center;gap:30px}#es-rc #es-rc-content .es-benefits__content-list-item{max-width:250px}#es-rc #es-rc-content .es-benefits__content-list-item-image{margin-bottom:20px}#es-rc #es-rc-content .es-benefits__content-list-item-title{padding-left:10px;padding-right:10px;margin-bottom:20px;font-size:16px;font-family:HurmeGeometricSans3-Regular,sans-serif;color:#fff;text-align:center}#es-rc #es-rc-content .es-features{margin-top:-1px;background:linear-gradient(to bottom,#72b1c3 10%,#eeebe6 10%)}#es-rc #es-rc-content .es-features__disclaimer{max-width:61%;margin:0 auto;padding-bottom:15px;font-family:HurmeGeometricSans3-Regular,sans-serif;font-size:12px;text-align:center}#es-rc #es-rc-content .es-features__bottle-content{padding-bottom:50px}#es-rc #es-rc-content .es-features__bottle-content-image{margin-bottom:30px;max-width:40%}#es-rc #es-rc-content .es-features__bottle-content-icons{display:flex;flex-direction:column;gap:30px}#es-rc #es-rc-content .es-features__bottle-content-single{max-width:250px;margin:0 auto}#es-rc #es-rc-content .es-features__bottle-content-icon-image{margin-bottom:20px}#es-rc #es-rc-content .es-features__bottle-content-icon-title{font-size:16px;font-family:HurmeGeometricSans3-Regular,sans-serif;text-align:center}#es-rc #es-rc-content .es-features__bottle-content--desktop{display:none}#es-rc #es-rc-content .es-steps{background:#eeebe6;padding-bottom:50px}#es-rc #es-rc-content .es-steps__group{position:relative}#es-rc #es-rc-content .es-steps__label{position:absolute;font-family:HurmeGeometricSans3-Regular,sans-serif;font-size:clamp(8px, 2.5vw, 30px);font-weight:700;color:#fff;text-transform:uppercase;width:clamp(50px,20vw,250px);height:clamp(50px,20vw,250px);border-radius:50%;background-color:#e46c5c;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;line-height:1.2;top:38%;right:22%}#es-rc #es-rc-content .es-steps__text{position:absolute;font-family:HurmeGeometricSans3-Bold,sans-serif;font-size:20px;font-size:clamp(18px, 5vw, 70px);font-weight:700;color:#fff;opacity:.8}#es-rc #es-rc-content .es-steps__text--first{top:5%;left:10%}#es-rc #es-rc-content .es-steps__text--second{top:5%;left:40%}#es-rc #es-rc-content .es-steps__text--third{top:5%;right:3%}#es-rc #es-rc-content .es-steps__single{display:flex;flex-direction:column;align-items:center;gap:20px;max-width:275px}#es-rc #es-rc-content .es-steps__single-title{font-size:30px;margin-bottom:10px;font-family:HurmeGeometricSans3-Bold,sans-serif;text-align:center;color:#9db8a6}#es-rc #es-rc-content .es-cross__single-description,#es-rc #es-rc-content .es-cross__subtitle,#es-rc #es-rc-content .es-restrictions__description,#es-rc #es-rc-content .es-steps__single-description{padding-left:10px;padding-right:10px;font-size:16px;font-family:HurmeGeometricSans3-Regular,sans-serif;text-align:center;margin-bottom:20px}#es-rc #es-rc-content .es-restrictions{background-color:#9db8a6;position:relative;padding-bottom:100px}#es-rc #es-rc-content .es-restrictions__image{position:absolute;margin-top:-30px;top:0;left:0}#es-rc #es-rc-content .es-restrictions__description{padding-top:60%;color:#eeebe6}#es-rc #es-rc-content .es-restrictions__description--bold{display:block;font-family:HurmeGeometricSans3-Bold,sans-serif}#es-rc #es-rc-content .es-restrictions__disclaimer{padding-left:20px;padding-right:20px;margin-bottom:20px;font-size:12px;font-family:HurmeGeometricSans3-Regular,sans-serif;color:#eeebe6;text-align:right}#es-rc #es-rc-content .es-design__description b,#es-rc #es-rc-content .es-footer__subtitle{font-family:HurmeGeometricSans3-Bold,sans-serif}#es-rc #es-rc-content .es-design{background:linear-gradient(to bottom,#e5dcd3 95%,#eeebe6 10%);padding-top:100%;position:relative;padding-bottom:30px}#es-rc #es-rc-content .es-design__left-image{position:absolute;top:0;left:0;margin-top:-20px}#es-rc #es-rc-content .es-design__content{padding-left:10px;padding-right:10px;padding-bottom:20px}#es-rc #es-rc-content .es-cross,#es-rc #es-rc-content .es-footer{background:#eeebe6;padding-bottom:30px}#es-rc #es-rc-content .es-cross__single-image{max-width:75%;margin-bottom:30px}#es-rc #es-rc-content .es-cross__items{display:flex;flex-direction:column;align-items:center;gap:20px}#es-rc #es-rc-content .es-cross__single-item-title{padding-left:10px;padding-right:10px;margin-bottom:10px;font-size:20px;font-family:HurmeGeometricSans3-Bold,sans-serif;text-align:center}#es-rc #es-rc-content .es-footer__image{max-width:90%;margin-bottom:20px}#es-rc #es-rc-content .es-footer__subtitle{margin-bottom:30px;font-size:16px;font-weight:700;text-align:center}@media screen and (min-width:500px){#es-rc #es-rc-content .es-benefits__content-list{flex-direction:row;flex-wrap:wrap;justify-content:center;align-items:flex-start;max-width:500px;margin:0 auto}#es-rc #es-rc-content .es-benefits__content-list-item{max-width:220px}}@media screen and (min-width:567px){#es-rc #es-rc-content .es-description__img,#es-rc #es-rc-content .es-design__left-image,#es-rc #es-rc-content .es-features__img{max-width:450px;margin-left:0}#es-rc #es-rc-content .es-benefits__img,#es-rc #es-rc-content .es-design__right-image{max-width:450px;margin-right:0}#es-rc #es-rc-content .es-design{padding-top:455px}}@media screen and (min-width:768px){#es-rc #es-rc-content .es-kv{position:relative;min-height:600px}#es-rc #es-rc-content .es-kv__logo{margin-left:35px;padding-top:100px;margin-bottom:0;max-width:30%}#es-rc #es-rc-content .es-kv__content{margin-left:35px;padding-left:0;max-width:500px;text-align:left}#es-rc #es-rc-content .es-kv__title{font-size:110px}#es-rc #es-rc-content .es-kv__subtitle{margin-bottom:100px;font-size:32px}#es-rc #es-rc-content .es-kv__description{max-width:300px}#es-rc #es-rc-content .es-kv__packshot{position:absolute;top:10%;right:16%;max-width:160px}#es-rc #es-rc-content .es-description{padding-top:50px;display:flex;flex-direction:row;justify-content:space-between;background:linear-gradient(to bottom,#72b1c3 85%,#14284b 50%)}#es-rc #es-rc-content .es-description__right{max-width:310px;margin-right:8%}#es-rc #es-rc-content .es-description__img{margin-top:-150px;max-width:380px;position:relative;z-index:1}#es-rc #es-rc-content .es-style{background:linear-gradient(to bottom,#14284b 75%,#eeebe6 50%);padding-bottom:0}#es-rc #es-rc-content .es-style__title{font-size:45px;margin-bottom:100px}#es-rc #es-rc-content .es-style__description{margin:0 auto 30px;max-width:545px;font-size:20px}#es-rc #es-rc-content .es-style__packshots{display:none}#es-rc #es-rc-content .es-style__packshot-wrapper{display:block;position:relative;max-width:735px;margin:0 auto}#es-rc #es-rc-content .es-style__packshot-desktop-title{position:absolute;font-size:24px;font-family:HurmeGeometricSans3-Bold,sans-serif;color:#fff}#es-rc #es-rc-content .es-style__packshot-desktop-title--1{top:40%;left:4%;max-width:100px}#es-rc #es-rc-content .es-style__packshot-desktop-title--2{top:-24%;left:37%}#es-rc #es-rc-content .es-style__packshot-desktop-title--3{top:40%;right:4%;max-width:100px}#es-rc #es-rc-content .es-benefits{padding-top:0;background:linear-gradient(to bottom,#eeebe6 41%,#72b1c3 30%)}#es-rc #es-rc-content .es-benefits__title,#es-rc #es-rc-content .es-design__title{font-size:24px}#es-rc #es-rc-content .es-benefits__inner{display:flex;flex-direction:row;justify-content:space-around}#es-rc #es-rc-content .es-benefits__img{max-width:380px;margin-right:0}#es-rc #es-rc-content .es-benefits__content-list{display:flex;flex-direction:row;align-items:flex-start;justify-content:center;max-width:none;flex-wrap:nowrap;padding-top:65px}#es-rc #es-rc-content .es-benefits__content-title--2{max-width:320px;margin-left:30px;margin-top:-145px}#es-rc #es-rc-content .es-benefits__content-wrapper{padding-top:60px;padding-left:25px;max-width:335px}#es-rc #es-rc-content .es-benefits__content-list-item{min-width:125px;max-width:190px}#es-rc #es-rc-content .es-benefits__content-list-item-title{font-size:14px}#es-rc #es-rc-content .es-benefits__content-list-item-image{max-width:100px}#es-rc #es-rc-content .es-features__wrapper{display:flex}#es-rc #es-rc-content .es-features__title{text-align:left}#es-rc #es-rc-content .es-features__bottle-content--desktop{display:block;position:relative;max-width:735px;margin:0 auto;padding-bottom:0}#es-rc #es-rc-content .es-features__bottle-content--mobile{display:none}#es-rc #es-rc-content .es-cross__single-image,#es-rc #es-rc-content .es-features__bottle-content-image{max-width:75%}#es-rc #es-rc-content .es-features__bottle-content-icon-title{position:absolute;max-width:250px}#es-rc #es-rc-content .es-features__bottle-content-icon-title--1{left:3%;top:55%}#es-rc #es-rc-content .es-features__bottle-content-icon-title--2{top:33%;right:7%}#es-rc #es-rc-content .es-features__bottle-content-icon-title--3{top:84%;right:3%}#es-rc #es-rc-content .es-features__inner{padding-top:160px;margin-right:5%;max-width:38%}#es-rc #es-rc-content .es-steps__list{gap:0;justify-content:center}#es-rc #es-rc-content .es-steps__single{flex-direction:row;justify-content:center;max-width:675px}#es-rc #es-rc-content .es-steps__single-title{font-size:57px}#es-rc #es-rc-content .es-steps__single-title--2{order:3}#es-rc #es-rc-content .es-steps__single-image--2{order:2}#es-rc #es-rc-content .es-steps__single-description{font-size:18px}#es-rc #es-rc-content .es-steps__single-description--2{order:1}#es-rc #es-rc-content .es-restrictions__disclaimer{max-width:50%;margin-left:auto}#es-rc #es-rc-content .es-design{padding-top:50px}#es-rc #es-rc-content .es-design__left-image{position:unset;margin-bottom:20px}#es-rc #es-rc-content .es-cross__subtitle{max-width:70%;margin:0 auto 30px}#es-rc #es-rc-content .es-cross__items{flex-direction:row;align-items:flex-start;justify-content:center}#es-rc #es-rc-content .es-cross__single-item-title{min-height:48px}#es-rc #es-rc-content .es-cross__single{display:flex;flex-direction:column;align-items:center;justify-content:center;max-width:225px;min-width:225px}#es-rc #es-rc-content .es-steps__single--2{margin-left:-.1%;margin-top:-.1%}#es-rc #es-rc-content .es-steps__single--3{margin-left:-1.5%;margin-top:-.2%}}@media screen and (min-width:900px){#es-rc #es-rc-content .es-benefits__content-wrapper{padding-top:74px;padding-left:80px;max-width:600px}#es-rc #es-rc-content .es-benefits__subtitle{font-size:20px;margin-bottom:31px}#es-rc #es-rc-content .es-benefits__description{font-size:19px}#es-rc #es-rc-content .es-benefits__content-title--2{max-width:435px;margin-left:86px;margin-bottom:75px;font-size:30px}}@media screen and (min-width:998px){#es-rc #es-rc-content .es-design__title,#es-rc #es-rc-content .es-steps__single-description{text-align:left}#es-rc #es-rc-content .es-kv__title{font-size:140px}#es-rc #es-rc-content .es-kv__subtitle{font-size:36px}#es-rc #es-rc-content .es-kv__inner{padding-left:40px}#es-rc #es-rc-content .es-kv__packshot{max-width:170px}#es-rc #es-rc-content .es-description__img{max-width:475px}#es-rc #es-rc-content .es-description__left{padding-bottom:0}#es-rc #es-rc-content .es-description__right{max-width:345px}#es-rc #es-rc-content .es-description__subtitle,#es-rc #es-rc-content .es-description__title{font-size:18px}#es-rc #es-rc-content .es-style,#es-rc #es-rc-content .es-style__packshot-wrapper{margin-top:-45px}#es-rc #es-rc-content .es-style__description{z-index:1;position:relative}#es-rc #es-rc-content .es-style__packshot-desktop-title--2{top:-16%}#es-rc #es-rc-content .es-design{padding-top:0}#es-rc #es-rc-content .es-design__left,#es-rc #es-rc-content .es-design__right{display:flex}#es-rc #es-rc-content .es-design__content{margin-right:10%;max-width:33%}#es-rc #es-rc-content .es-design__content--1{padding-top:3%;margin-right:5%;max-width:42%}#es-rc #es-rc-content .es-design__content--2{padding-top:3%;margin-left:4%;margin-right:2%;max-width:46%}#es-rc #es-rc-content .es-steps__image{margin-bottom:0}#es-rc #es-rc-content .es-steps__single{max-width:740px}#es-rc #es-rc-content .es-steps__single-title{font-size:65px}#es-rc #es-rc-content .es-steps__single-description--2{text-align:right}#es-rc #es-rc-content .es-cross__single{max-width:295px}#es-rc #es-rc-content .es-cross__single-item-title{min-height:unset}#es-rc #es-rc-content .es-cross__single-image{max-width:100%}#es-rc #es-rc-content .es-restrictions__image{margin-top:-93px}#es-rc #es-rc-content .es-benefits__title,#es-rc #es-rc-content .es-cross__title,#es-rc #es-rc-content .es-design__title,#es-rc #es-rc-content .es-features__title{font-size:28px}#es-rc #es-rc-content .es-footer__image{margin-bottom:40px}#es-rc #es-rc-content .es-footer__subtitle{margin-bottom:50px;font-size:24px}}@media screen and (min-width:1200px){#es-rc #es-rc-content .es-kv{padding-bottom:115px}#es-rc #es-rc-content .es-kv__logo{margin-left:48px;padding-top:92px;margin-bottom:0;max-width:40%}#es-rc #es-rc-content .es-kv__content{margin-left:44px;max-width:700px}#es-rc #es-rc-content .es-kv__title{font-size:150px}#es-rc #es-rc-content .es-kv__subtitle{margin-bottom:83px;font-size:48px}#es-rc #es-rc-content .es-kv__packshot{max-width:200px;right:18%;top:7%}#es-rc #es-rc-content .es-kv__description{max-width:500px;font-size:24px}#es-rc #es-rc-content .es-description{background:linear-gradient(to bottom,#9db8a6 78%,#14284b 50%)}#es-rc #es-rc-content .es-description__img{max-width:558px;margin-top:-201px}#es-rc #es-rc-content .es-description__title{font-size:20px}#es-rc #es-rc-content .es-description__subtitle{font-size:22px}#es-rc #es-rc-content .es-description__right{max-width:506px;margin-right:4%;padding-top:93px}#es-rc #es-rc-content .es-style{margin-top:-90px;background:linear-gradient(to bottom,#14284b 80%,#eeebe6 50%)}#es-rc #es-rc-content .es-style__title{margin-bottom:85px}#es-rc #es-rc-content .es-style__packshot-wrapper{margin-top:-100px;max-width:100%}#es-rc #es-rc-content .es-style__description{font-size:23px;max-width:850px}#es-rc #es-rc-content .es-style__packshot-desktop-title{max-width:100%;font-size:33px}#es-rc #es-rc-content .es-style__packshot-desktop-title--1{top:40%;left:9%}#es-rc #es-rc-content .es-style__packshot-desktop-title--2{top:-9%;left:39%}#es-rc #es-rc-content .es-style__packshot-desktop-title--3{top:40%;right:5%}#es-rc #es-rc-content .es-benefits__title,#es-rc #es-rc-content .es-cross__title,#es-rc #es-rc-content .es-design__title,#es-rc #es-rc-content .es-features__title{font-size:32px}#es-rc #es-rc-content .es-features__bottle-content-image{max-width:100%}#es-rc #es-rc-content .es-features__bottle-content--desktop{margin-top:-35px}#es-rc #es-rc-content .es-benefits{background:linear-gradient(to bottom,#eeebe6 46%,#72b1c3 30%)}#es-rc #es-rc-content .es-benefits__img{max-width:600px}#es-rc #es-rc-content .es-benefits__content-wrapper{padding-top:90px;padding-left:32px;max-width:589px}#es-rc #es-rc-content .es-benefits__subtitle{font-size:23px;margin-bottom:31px}#es-rc #es-rc-content .es-benefits__description{font-size:21px}#es-rc #es-rc-content .es-benefits__content-title--2{max-width:435px;margin-left:86px;margin-top:-225px;margin-bottom:75px;font-size:35px}#es-rc #es-rc-content .es-benefits__content-list-item{max-width:210px}#es-rc #es-rc-content .es-benefits__content-list-item-title{font-size:16px}#es-rc #es-rc-content .es-benefits__content-list-item-image{max-width:135px;margin-bottom:30px}#es-rc #es-rc-content .es-features__img{max-width:610px}#es-rc #es-rc-content .es-features__description{font-size:24px}#es-rc #es-rc-content .es-features__bottle-content-icon-title{font-size:17px;max-width:330px}#es-rc #es-rc-content .es-features__bottle-content-icon-title--1{left:-9%;top:54%;max-width:275px}#es-rc #es-rc-content .es-features__bottle-content-icon-title--2{top:31%;right:1%;max-width:201px}#es-rc #es-rc-content .es-features__bottle-content-icon-title--3{max-width:277px;top:84%;right:-9%}#es-rc #es-rc-content .es-steps__single{max-width:793px}#es-rc #es-rc-content .es-steps__single--2{margin-left:-13.3%;margin-top:-.14%}#es-rc #es-rc-content .es-steps__single--3{margin-left:-1.6%;margin-top:-.1%}#es-rc #es-rc-content .es-steps__single-title{font-size:65px}#es-rc #es-rc-content .es-design__description,#es-rc #es-rc-content .es-steps__single-description{font-size:22px}#es-rc #es-rc-content .es-restrictions__description{max-width:89%;margin:0 auto;padding-top:55%;font-size:21px}#es-rc #es-rc-content .es-restrictions__disclaimer{margin-top:33px;margin-right:70px}#es-rc #es-rc-content .es-design__content--1{padding-top:3%;margin-right:-1%;max-width:50%}#es-rc #es-rc-content .es-design__content--2{padding-top:4%;margin-left:2%;max-width:73%;margin-right:3%}#es-rc #es-rc-content .es-design__left-image,#es-rc #es-rc-content .es-design__right-image{margin-top:-90px;max-width:555px}#es-rc #es-rc-content .es-design__right-image{margin-top:-20px}#es-rc #es-rc-content .es-cross{padding-top:30px}#es-rc #es-rc-content .es-cross__single{max-width:346px}#es-rc #es-rc-content .es-cross__subtitle{font-size:22px;max-width:79%}#es-rc #es-rc-content .es-cross__single-item-title{font-size:22px}#es-rc #es-rc-content .es-cross__single-description{font-size:18px}}
+  </style>
+</head>
+
+  <body>
+    <div id="es-rc">
+      <div id="es-rc-content">
+        <div class="es-kv">
+          <div class="es-kv__inner">
+            <img class="es-kv__logo"
+                 src="./img/logo.png"
+                 alt="Sodastream logotyp">
+            <div class="es-kv__content">
+              <h3 class="es-kv__title">
+                Butelka
+              </h3>
+              <p class="es-kv__subtitle">termiczna do gazowania wody&nbsp;Miętowa,&nbsp;0,9&nbsp;l
+              </p>
+              <p class="es-kv__description">Złap ulubione bąbelki do termicznej butelki i&nbsp;zabierz je ze sobą!
+              </p>
+            </div>
+          </div>
+          <img class="es-kv__packshot"
+               src="./img/packshot.png"
+               alt="Butelka granatowa">
+        </div>
+        <div class="es-description">
+          <div class="es-description__left">
+            <img class="es-description__img"
+                 src="./img/description-img.png"
+                 alt="Sodastream granatowa">
+          </div>
+          <div class="es-description__right">
+            <p class="es-description__title">Poznaj SodaStream Fizz&Go
+              w&nbsp;kolorze&nbsp;pastelowej mięty!
+            </p>
+            <p class="es-description__subtitle">To innowacyjna butelka do gazowania wody, która łączy zalety kubka
+              termicznego
+              i&nbsp;bidonu.&nbsp;Wysoka funkcjonalność została ujęta&nbsp;w stylowym, pastelowym designie.
+            </p>
+          </div>
+        </div>
+        <div class="es-style">
+          <h3 class="es-style__title">Wiosenny kolor:</h3>
+          <p class="es-style__description">delikatny, miętowy kolor będzie oryginalnym dodatkiem
+            do&nbsp;codziennych&nbsp;i&nbsp;sportowych stylizacji. Jest idealny dla żywiołowych osób.
+          </p>
+          <div class="es-style__packshot-wrapper">
+            <img class="es-style__packshot-desktop"
+                 src="./img/style-bottles.png"
+                 alt="Sodastream butelka granatowa, beżowa, miętowa">
+            <p class="es-style__packshot-desktop-title es-style__packshot-desktop-title--1">
+              subtelny beż
+            </p>
+            <p class="es-style__packshot-desktop-title es-style__packshot-desktop-title--2">
+              Pastelowa mięta
+            </p>
+            <p class="es-style__packshot-desktop-title es-style__packshot-desktop-title--3">
+              elegancki granat
+            </p>
+          </div>
+          <div class="es-style__packshots">
+            <p class="es-style__packshot-title es-style__packshot-title--1">subtelny beż</p>
+            <img class="es-style__img es-style__img--mobile"
+                 src="./img/bottle-sand.png"
+                 alt="Butelka beżowa">
+            <p class="es-style__packshot-title es-style__packshot-title--3">pastelowa mięta</p>
+            <img class="es-style__img es-style__img--mobile"
+                 src="./img/bottle-green.png"
+                 alt="Butelka miętowa">
+            <p class="es-style__packshot-title es-style__packshot-title--2">elegancki granat</p>
+            <img class="es-style__img es-style__img--mobile"
+                 src="./img/bottle-blue.png"
+                 alt="Butelka granatowa">
+            <img class="es-style__img es-style__img--desktop"
+                 src="./img/style-bottles.png"
+                 alt="Trzy butelki">
+          </div>
+        </div>
+        <div class="es-benefits">
+          <h3 class="es-benefits__title">
+            Dołącz do wielbicieli bąbelkowej rewolucji z SodaStream Fizz&Go!
+          </h3>
+          <div class="es-benefits__inner">
+            <div class="es-benefits__content-wrapper">
+
+              <p class="es-benefits__subtitle">
+                Twój nowy towarzysz codziennej
+                aktywności - SodaStream Fizz&Go
+              </p>
+              <p class="es-benefits__description">
+                Szukasz prostego rozwiązania,
+                które&nbsp;dostarczy&nbsp;Ci codzienną dawkę nawodnienia w każdej sytuacji?
+                SodaStream&nbsp;Fizz&Go to funkcjonalny bidon termiczny, który pomoże Ci pamiętać
+                o&nbsp;piciu&nbsp;wody w każdym miejscu - w pracy,
+                na&nbsp;siłowni czy podczas spaceru w parku.
+              </p>
+            </div>
+            <img class="es-benefits__img"
+                 src="./img/benefits-img.png"
+                 alt="Bidon termiczny">
+          </div>
+
+
+          <div class="es-benefits__content">
+            <h3 class="es-benefits__content-title es-benefits__content-title--2">Co wyróżnia<br>
+              SodaStream Fizz&Go?
+            </h3>
+
+            <div class="es-benefits__content-list">
+              <div class="es-benefits__content-list-item">
+                <img class="es-benefits__content-list-item-image"
+                     src="./img/icon-1.png"
+                     alt="Nie przecieka">
+                <p class="es-benefits__content-list-item-title">Hermetyczna konstrukcja<br>
+                  z półelastycznym paskiem silikonowym i uszczelką zapewnia szczelność.
+                </p>
+              </div>
+              <div class="es-benefits__content-list-item">
+                <img class="es-benefits__content-list-item-image"
+                     src="./img/icon-2.png"
+                     alt="Wolna od BPA">
+                <p class="es-benefits__content-list-item-title">
+                  Butelka SodaStream<br>
+                  Cool jest wykonana<br>
+                  z materiałów wolnych
+                  od&nbsp;BPA.
+                </p>
+              </div>
+              <div class="es-benefits__content-list-item">
+                <img class="es-benefits__content-list-item-image"
+                     src="./img/icon-3.png"
+                     alt="Jest łatwa w czyszczeniu">
+                <p class="es-benefits__content-list-item-title">
+                  Dla Twojej wygody<br>
+                  Butelki SodaStream Cool można myć w zmywarce.
+
+                </p>
+              </div>
+              <div class="es-benefits__content-list-item">
+                <img class="es-benefits__content-list-item-image"
+                     src="./img/icon-4.png"
+                     alt="Wykonana z wytrzymałej stali">
+                <p class="es-benefits__content-list-item-title">
+                  Butelka wykonana
+                  jest z&nbsp;wysokiej jakości
+                  stali nierdzewnej 18/8, odpornej na uderzenia i&nbsp;korozję.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="es-features">
+          <div class="es-features__wrapper">
+            <img class="es-features__img"
+                 src="./img/features-img.png"
+                 alt="Butelka termiczna">
+            <div class="es-features__inner">
+              <h3 class="es-features__title">Rewolucyjna
+                butelka&nbsp;termiczna,
+                w&nbsp;której nagazujesz wodę!
+              </h3>
+              <p class="es-features__description">SodaStream Fizz&Go to butelka termiczna do gazowania wody,
+                dzięki której możesz cieszyć się
+                zarówno zimną, orzeźwiającą wodą,
+                jak również ciepłym, rozgrzewającym napojem* – wszystko dla Twojego komfortu!
+                <br><br>
+                Wielofunkcyjna butelka SodaStream Fizz&Go to:
+              </p>
+            </div>
+          </div>
+          <div class="es-features__bottle-content es-features__bottle-content--desktop">
+            <img class="es-features__bottle-content-image"
+                 src="./img/features-bottle-d.png"
+                 alt="Wielorazową SodaStream">
+            <p class="es-features__bottle-content-icon-title es-features__bottle-content-icon-title--1">
+              Funkcjonalność i trwałość:
+              jedna&nbsp;butelka będzie Ci służyć
+              przez wiele lat! Możesz zapomnieć
+              o jednorazowych, plastikowych butelkach.
+            </p>
+            <p class="es-features__bottle-content-icon-title es-features__bottle-content-icon-title--2">
+              Chłodne orzeźwienie:
+              napoje pozostają zimne
+              przez do 12 godzin.
+            </p>
+            <p class="es-features__bottle-content-icon-title es-features__bottle-content-icon-title--3">
+              Długotrwałe utrzymanie
+              temperatury, dzięki podwójnym ściankom z izolacją próżniową.
+            </p>
+          </div>
+          <div class="es-features__bottle-content es-features__bottle-content--mobile">
+            <img class="es-features__bottle-content-image"
+                 src="./img/features-bottle.png"
+                 alt="Butelka granatowa">
+            <div class="es-features__bottle-content-icons">
+              <div class="es-features__bottle-content-single">
+                <img class="es-features__bottle-content-icon-image"
+                     src="./img/features-icon-1.png"
+                     alt="Wielorazowe SodaStream">
+                <p class="es-features__bottle-content-icon-title">
+                  Funkcjonalność i trwałość:
+                  jedna butelka będzie Ci służyć
+                  przez wiele lat! Możesz zapomnieć
+                  o jednorazowych, plastikowych butelkach.
+                </p>
+              </div>
+              <div class="es-features__bottle-content-single">
+                <img class="es-features__bottle-content-icon-image"
+                     src="./img/features-icon-2.png"
+                     alt="zimne nawet przez 12 godzin">
+                <p class="es-features__bottle-content-icon-title">
+                  Chłodne orzeźwienie:
+                  napoje pozostają zimne
+                  przez do 12 godzin.
+                </p>
+              </div>
+              <div class="es-features__bottle-content-single">
+                <img class="es-features__bottle-content-icon-image"
+                     src="./img/features-icon-3.png"
+                     alt="Podwójne ścianki">
+                <p class="es-features__bottle-content-icon-title">
+                  Długotrwałe utrzymanie
+                  temperatury, dzięki podwójnym ściankom z izolacją próżniową.
+                </p>
+              </div>
+            </div>
+          </div>
+          <p class="es-features__disclaimer">
+            *UWAGA! Nie nasycaj gazem wody o temperaturze powyżej 45°C. Zachowaj szczególną ostrożność
+            podczas przechowywania gorących płynów w butelce i otwierania butelki zawierającej gorące płyny.
+          </p>
+        </div>
+        <div class="es-steps">
+          <div class="es-steps__group">
+            <p class="es-steps__text es-steps__text--first">gazuj</p>
+            <p class="es-steps__text es-steps__text--second">miksuj</p>
+            <p class="es-steps__text es-steps__text--third">i w drogę</p>
+            <img class="es-steps__image es-steps__image--desktop"
+                 src="./img/steps-desktop.png"
+                 alt="Termiczna butelka">
+            <p class="es-steps__label">
+              Termiczna<br> butelka do <br>gazowania
+            </p>
+          </div>
+          <div class="es-steps__list">
+            <div class="es-steps__single">
+              <p class="es-steps__single-title es-steps__single-title--1">Krok&nbsp;1</p>
+              <img class="es-steps__single-image"
+                   src="./img/step-1.png"
+                   alt="Krok 1">
+              <p class="es-steps__single-description es-steps__single-description--1">Wlej wodę do butelki termicznej
+                SodaSteram
+                Fizz&Go 0,9 l i zamontuj
+                w&nbsp;saturatorze SodaStream.
+              </p>
+            </div>
+            <div class="es-steps__single es-steps__single--2">
+              <p class="es-steps__single-title es-steps__single-title--2">Krok&nbsp;2</p>
+              <img class="es-steps__single-image es-steps__single-image--2"
+                   src="./img/step-2.png"
+                   alt="Krok 2">
+              <p class="es-steps__single-description es-steps__single-description--2">Naciśnij przycisk gazowania,
+                aż do uzyskania odpowiedniego poziomu bąbelków.
+              </p>
+            </div>
+            <div class="es-steps__single es-steps__single--3">
+              <p class="es-steps__single-title es-steps__single-title--3">Krok&nbsp;3</p>
+              <img class="es-steps__single-image"
+                   src="./img/step-3.png"
+                   alt="Krok 3">
+              <p class="es-steps__single-description es-steps__single-description--3">Zmiksuj z ulubionym syropem
+                SodaStream lub stwórz
+                własną kompozycję.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="es-restrictions">
+          <img class="es-restrictions__image"
+               src="./img/restrictions-img.png"
+               alt="butelki termiczne SodaStream Fizz&Go">
+
+          <p class="es-restrictions__description">
+            <span class="es-restrictions__description--bold">Do jakich saturatorów pasują butelki SodaStream
+              Fizz&Go?</span>
+            Butelki SodaStream Fizz&Go 0,9 l są przeznaczone do saturatorów SodaStream Art,
+            Terra,&nbsp;Duo&nbsp;i&nbsp;Ensõ.
+            <br><br>
+            <span class="es-restrictions__description--bold">Czy butelka termiczna może zastąpić bidon i kubek
+              termiczny?</span>
+            Tak! Butelka termiczna SodaStream Fizz&Go to zaskakujące połączenie funkcjonalności bidonu, butelki i kubka
+            termicznego,
+            a jej smukły kształt pasuje nawet do uchwytu samochodowego.
+
+            <br><br>
+            <span class="es-restrictions__description--bold">Dlaczego butelka SodaStream Fizz&Go to idealne rozwiązanie
+              do codziennego nawadniania?</span>
+            SodaStream Fizz&Go to bidon termiczny, w którym możesz gazować wodę.
+            Sprawdzi&nbsp;się&nbsp;w&nbsp;domu,&nbsp;w&nbsp;pracy i podczas aktywności outdoorowych więc wodę
+            lub&nbsp;ulubiony&nbsp;napój&nbsp;możesz mieć zawsze przy sobie. Utrzymuje idealną temperaturę zimnych
+            i&nbsp;ciepłych napojów* oraz jest wyjątkowo szczelny.
+          </p>
+        </div>
+        <div class="es-design">
+          <div class="es-design__left">
+            <img class="es-design__left-image"
+                 src="./img/design-left.png"
+                 alt="Designerska butelka">
+            <div class="es-design__content es-design__content--1">
+              <p class="es-design__title">
+                Modna pastelowa mięta
+                –&nbsp;dodaj&nbsp;codzienności odrobinę koloru z SodaStream Fizz&Go
+              </p>
+              <p class="es-design__description">
+                <b>Preferujesz aktywny tryb życia?</b><br>
+                SodaStream Fizz&Go dotrzyma Ci kroku
+                każdego&nbsp;dnia,&nbsp;zapewniając
+                nawodnienie&nbsp;i&nbsp;wygodę&nbsp;w pracy,
+                w&nbsp;trakcie&nbsp;joggingu&nbsp;i na siłowni.
+                <br><br>
+                <b>Lubisz uprawiać sport na świerzym powietrzu?</b><br> Wygodna i szczelna butelka termiczna idealnie
+                sprawdzi się
+                podczas
+                wycieczek rowerowych, górskich czy wspinaczki.
+              </p>
+            </div>
+          </div>
+          <div class="es-design__right">
+            <div class="es-design__content es-design__content--2">
+              <p class="es-design__description">
+                <b>Lubisz designerskie dodatki?</b> <br>
+                SodaStream Fizz&Go w odcieniu pastelowej mięty zaakcentuje Twój oryginalny styl,
+                a&nbsp;jednocześnie będzie eleganckim dodatkiem.
+                <br><br>
+                <b>Stawiasz na ekologiczne wybory?</b> <br>Wybierając butelkę SodaStream zastępujesz setki
+                jednorazowych, plastikowych butelek.
+
+                <br><br>
+                <b>Szukasz oryginalnego pomysłu
+                  na upominek?</b> Butelka termiczna to świetny pomysł na prezent, szczególnie dla wielbicieli
+                nowoczesnych rozwiązań.
+              </p>
+            </div>
+            <img class="es-design__right-image"
+                 src="./img/design-right.png"
+                 alt="SodaStream Fizz&Go">
+          </div>
+        </div>
+        <div class="es-cross">
+          <p class="es-cross__title">Odkryj eksplozję smaków i kolorów!</p>
+          <p class="es-cross__subtitle">Woda gazowana to za mało? Z syropami SodaStream stworzysz
+            wyjątkowe&nbsp; lemoniady, owocowe napoje i moktajle oraz odtworzysz klasyczne smaki
+            znanych&nbsp;napojów gazowanych.
+          </p>
+          <div class="es-cross__items">
+            <div class="es-cross__single">
+              <img class="es-cross__single-image"
+                   src="./img/cross-1.png"
+                   alt="Domowe napoje gazowane">
+              <p class="es-cross__single-item-title">Ponadczasowe klasyki:</p>
+              <p class="es-cross__single-description">
+                Masz ochotę na Colę, Mirindę lub 7Up? Dodaj koncentrat SodaStream
+                do&nbsp;wody gazowanej i ciesz się legendarnym smakiem ulubionych napojów.
+              </p>
+            </div>
+            <div class="es-cross__single">
+              <img class="es-cross__single-image"
+                   src="./img/cross-2.png"
+                   alt="Lemoniada">
+              <p class="es-cross__single-item-title">Moc owoców bez cukru:</p>
+              <p class="es-cross__single-description">
+                Rozsmakuj się w napojach o smaku Pomarańczy Mango, Owoców Leśnych
+                i Marakui lub stwórz własne,
+                oryginalne&nbsp;kompozycje.
+              </p>
+            </div>
+            <div class="es-cross__single">
+              <img class="es-cross__single-image"
+                   src="./img/cross-3.png"
+                   alt="Moktajle i koktajle">
+              <p class="es-cross__single-item-title">Zaskakujące moktajle:</p>
+              <p class="es-cross__single-description">
+                Stwórz kolorowe drinki na bazie bezalkoholowych syropów do koktajli
+                i&nbsp;moktajli SodaStream Crafted.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="es-footer">
+          <img class="es-footer__image"
+               src="./img/syrups.png"
+               alt="Syropy">
+          <p class="es-footer__subtitle">#JednaSodaStreamWieleMożliwości</p>
+          <img class="es-footer__image"
+               src="./img/logo-footer.png"
+               alt="JednaSodaStreamWieleMożliwości">
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
